@@ -87,7 +87,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         userAccountManager.save(userAccount);
     }
     public Employee findEmployeeByUsername(String username) {
-        return employeeRepository.findByName(username);
+        return employeeRepository.findByUsername(username);
     }
     public UserDetails loadUserByUsernameEmployee(String username) throws UsernameNotFoundException {
     	Employee employee = employeeRepository.findByUsername(username);
